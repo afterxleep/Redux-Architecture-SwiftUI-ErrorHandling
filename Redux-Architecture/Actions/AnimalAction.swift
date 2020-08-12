@@ -10,5 +10,5 @@ import Foundation
 enum AnimalAction {
     case fetch
     case fetchComplete(animal: String)
-    case fetchError(error: Error?)
+    case fetchError(error: AnimalMiddlewareError?)
 }

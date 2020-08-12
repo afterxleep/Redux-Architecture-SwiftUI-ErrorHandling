@@ -21,7 +21,7 @@ func animalReducer(state: inout AnimalState, action: AnimalAction) -> Void {
         case .fetchError(let error):
             state.fetchInProgress = false
             switch error {
-                case AnimalMiddlewareError.networkError:
+                case .networkError:
                     state.fetchError = "Oops!.  It seems someone made a mistake!"
             default:
                 state.fetchError = "I'm sorry, but the server went away"
